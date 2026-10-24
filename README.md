@@ -41,6 +41,20 @@ $ python seed.py
 
 ## Instructions
 
+## Validation behavior
+
+The `Author` and `Post` models validate values as they are assigned. Authors
+must have a unique, non-empty name and a phone number made up of exactly ten
+digits. Posts need at least 250 characters of content, may have a summary of
+up to 250 characters, must use the `Fiction` or `Non-Fiction` category, and
+must include one of the supported clickbait phrases in the title.
+
+Run the tests from the `server/` directory with:
+
+```console
+pytest -x
+```
+
 ### Task 1: Define the Problem
 
 Currently, the application lacks basic validation. The following issues exist:
